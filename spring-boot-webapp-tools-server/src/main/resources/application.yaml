@@ -1,0 +1,24 @@
+server:
+  port: 20000
+  compression:
+    enabled: true
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/tools
+    username: admin
+    password: pa55w0rd
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+  application:
+    name: webapp-tools-server
+  jackson:
+    default-property-inclusion: non_empty
+    generator:
+      write-numbers-as-strings: true
+    serialization:
+      write-dates-as-timestamps: false
